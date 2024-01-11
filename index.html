@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Wellness Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Health and Wellness Survey</h1>
+        <p>
+            Thank you for participating in our Health and Wellness Survey. Your insights are valuable in
+            promoting healthier lifestyles. This survey covers various aspects of your well-being, including exercise
+            habits, nutrition, mental health, and lifestyle choices.
+        </p>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <!-- PERSONAL INFORMATION -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:
+                    <input type="text" name="name" id="name" placeholder="E.g., John Doe" required>
+                </label>
+                <label for="email">Email:
+                    <input type="email" name="email" id="email" placeholder="E.g., jdoe@example.com" required>
+                </label>
+                <label for="number">Age:
+                    <input type="number" name="age" id="number" min="13" max="100" placeholder="E.g., 20" required>
+                </label>
+                <label for="gender">Gender:
+                    <select name="gender" id="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <!-- Additional input for specifying other gender (hidden by default) -->
+                <label id="other-gender-label" for="other-gender">Please specify your gender:
+                    <input type="text" id="other-gender" name="other-gender" required>
+                </label>
+            </fieldset>
+
+            <!-- EXERCISE HABITS -->
+            <fieldset>
+                <legend>Exercise Habits</legend>
+                <label for="exercise-frequency">How many days per week do you engage in physical exercise?
+                    <input type="number" id="exercise-frequency" name="exercise-frequency" min="0" max="7"
+                        placeholder="E.g., 4" required>
+                </label>
+                <label for="favorite-exercise">What is your favorite type of exercise?
+                    <input type="text" id="favorite-exercise" name="favorite-exercise"
+                        placeholder="E.g., Running, Yoga, Weightlifting" required>
+                </label>
+                <label for="exercise-time">During what time of the day do you prefer to exercise?
+                    <select id="exercise-time" name="exercise-time" required>
+                        <option value="">Select your preference</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                        <option value="night">Night</option>
+                    </select>
+                </label>
+                <label for="exercise-intensity">How would you describe the intensity of your typical workout?
+                    <select id="exercise-intensity" name="exercise-intensity" required>
+                        <option value="">Select the intensity</option>
+                        <option value="low">Low</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="high">High</option>
+                        <option value="intense">Intense</option>
+                    </select>
+                </label>
+                <fieldset>
+                    <legend>What are your primary fitness goals? (Select all that apply)</legend>
+                    <label for="goal-weight-loss">
+                        <input class="inline" type="checkbox" id="goal-weight-loss" name="exercise-goals"
+                            value="weight-loss"> Weight
+                        Loss
+                    </label>
+                    <label for="goal-muscle-gain">
+                        <input class="inline" type="checkbox" id="goal-muscle-gain" name="exercise-goals"
+                            value="muscle-gain"> Muscle
+                        Gain
+                    </label>
+                    <label for="goal-flexibility">
+                        <input class="inline" type="checkbox" id="goal-flexibility" name="exercise-goals"
+                            value="flexibility">
+                        Flexibility
+                    </label>
+                    <label for="goal-stress-relief">
+                        <input class="inline" type="checkbox" id="goal-stress-relief" name="exercise-goals"
+                            value="stress-relief">
+                        Stress Relief
+                    </label>
+                    <label for="goal-endurance">
+                        <input class="inline" type="checkbox" id="goal-endurance" name="exercise-goals"
+                            value="endurance"> Endurance
+                    </label>
+                </fieldset>
+            </fieldset>
+
+            <!-- NUTRITION PRACTICES -->
+            <fieldset>
+                <legend>Nutrition Practices</legend>
+                <label for="diet-type">What type of diet do you primarily follow?
+                    <select id="diet-type" name="diet-type" required>
+                        <option value="">Select your diet type</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="omnivore">Omnivore</option>
+                        <option value="pescatarian">Pescatarian</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <!-- Additional input for specifying other diet type (hidden by default) -->
+                <label id="other-diet-type-label" for="other-diet-type">
+                    Please specify your diet type:
+                    <input type="text" id="other-diet-type" name="other-diet-type" required>
+                </label>
+                <label for="food-allergies">Do you have any food allergies or intolerances?
+                    <label for="food-allergies-yes">
+                        <input class="inline" type="radio" id="food-allergies-yes" name="food-allergies-option"
+                            value="yes"> Yes
+                    </label>
+                    <label for="food-allergies-no">
+                        <input class="inline" type="radio" id="food-allergies-no" name="food-allergies-option"
+                            value="no" checked> No
+                    </label>
+                </label>
+                <!-- Additional textarea for specifying food allergies (hidden by default) -->
+                <label id="food-allergies-details-label" for="food-allergies-details">
+                    Please specify your food allergies or intolerances:
+                    <textarea id="food-allergies-details" name="food-allergies-details"></textarea>
+                </label>
+                <label for="hydration-habits">How much water do you typically consume in a day? (in liters)
+                    <input type="number" id="hydration-habits" name="hydration-habits" min="0" step="0.1" required>
+                </label>
+                <label for="meal-pattern">Describe your typical meal pattern.
+                    <textarea id="meal-pattern" name="meal-pattern" placeholder="e.g., number of meals, snacks, etc."
+                        required></textarea>
+                </label>
+                <label for="nutritional-supplements">Do you take any nutritional supplements regularly?
+                    <label for="nutritional-supplements-yes">
+                        <input class="inline" type="radio" id="nutritional-supplements-yes"
+                            name="nutritional-supplements-option" value="yes"> Yes
+                    </label>
+                    <label for="nutritional-supplements-no">
+                        <input class="inline" type="radio" id="nutritional-supplements-no"
+                            name="nutritional-supplements-option" value="no" checked> No
+                    </label>
+                </label>
+                <!-- Additional textarea for specifying nutritional supplements (hidden by default) -->
+                <label id="nutritional-supplements-details-label" for="nutritional-supplements-details">Please specify
+                    the nutritional supplements you take:
+                    <textarea id="nutritional-supplements-details" name="nutritional-supplements-details"
+                        required></textarea>
+                </label>
+            </fieldset>
+
+            <!-- MENTAL HEALTH -->
+            <fieldset>
+                <legend>Mental Health</legend>
+                <label for="stress-level">On a scale from 1 to 10, how would you rate your stress level?
+                    <input type="number" id="stress-level" name="stress-level" min="1" max="10" placeholder="E.g., 3"
+                        required>
+                </label>
+                <fieldset>
+                    <legend class="embedded-legend">What are the primary triggers of stress in your life? (Select all
+                        that apply)</legend>
+
+                    <label for="trigger-work">
+                        <input class="inline" type="checkbox" id="trigger-work" name="stress-triggers" value="work">
+                        Work
+                    </label>
+
+                    <label for="trigger-relationships">
+                        <input class="inline" type="checkbox" id="trigger-relationships" name="stress-triggers"
+                            value="relationships">
+                        Relationships
+                    </label>
+
+                    <label for="trigger-finances">
+                        <input class="inline" type="checkbox" id="trigger-finances" name="stress-triggers"
+                            value="finances"> Finances
+                    </label>
+
+                    <label for="trigger-health">
+                        <input class="inline" type="checkbox" id="trigger-health" name="stress-triggers" value="health">
+                        Health
+                    </label>
+                    <label for="trigger-other">
+                        <input class="inline" type="checkbox" id="trigger-other" name="stress-triggers" value="other">
+                        Other
+                        <!-- Additional input for specifying other triggers of stress (hidden by default) -->
+                        <input type="text" id="other-trigger-description" name="other-trigger-description"
+                            placeholder="Specify other">
+                    </label>
+                </fieldset>
+                <label for="stress-management">How do you typically manage stress in your life?
+                    <textarea id="stress-management" name="stress-management" required></textarea>
+                </label>
+            </fieldset>
+
+            <!-- LIFESTYLE CHOICES -->
+            <fieldset>
+                <legend>Lifestyle Choices</legend>
+                <label for="sleep-hours">On average, how many hours of sleep do you get per night?
+                    <input type="number" id="sleep-hours" name="sleep-hours" min="1" required>
+                </label>
+                <fieldset>
+                    <legend class="embedded-legend">Select your preferred leisure activities (Select all that apply)
+                    </legend>
+
+                    <label for="activity-walking">
+                        <input class="inline" type="checkbox" id="activity-walking" name="leisure-activities"
+                            value="walking"> Walking
+                    </label>
+
+                    <label for="activity-cycling">
+                        <input class="inline" type="checkbox" id="activity-cycling" name="leisure-activities"
+                            value="cycling"> Cycling
+                    </label>
+
+                    <label for="activity-reading">
+                        <input class="inline" type="checkbox" id="activity-reading" name="leisure-activities"
+                            value="reading"> Reading
+                    </label>
+
+                    <label for="activity-meditation">
+                        <input class="inline" type="checkbox" id="activity-meditation" name="leisure-activities"
+                            value="meditation">
+                        Meditation
+                    </label>
+
+                    <label for="activity-socializing">
+                        <input class="inline" type="checkbox" id="activity-socializing" name="leisure-activities"
+                            value="socializing">
+                        Socializing
+                    </label>
+
+                    <label for="activity-other">
+                        <input class="inline" type="checkbox" id="activity-other" name="leisure-activities"
+                            value="other"> Other
+                        <!-- Additional input for specifying other leisure activities (hidden by default) -->
+                        <input type="text" id="other-activity-description" name="other-activity-description"
+                            placeholder="Specify other">
+                    </label>
+                </fieldset>
+                <label for="work-life-balance">How would you rate your work-life balance?
+                    <select id="work-life-balance" name="work-life-balance" required>
+                        <option value="1">Poor</option>
+                        <option value="3">Below Average</option>
+                        <option value="5" selected>Average</option>
+                        <option value="7">Good</option>
+                        <option value="10">Ideal</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <!-- ADDITIONAL COMMENTS -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="additional-comments">Feel free to provide any additional comments or suggestions:
+                    <textarea id="additional-comments" name="additional-comments" rows="4"
+                        placeholder="Your comments..."></textarea>
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>🌟 Thank you for sharing your insights with us! Your input is invaluable and contributes to a healthier
+            future for all. 🌿</p>
+        <p>Stay tuned for exciting updates and initiatives from our community!</p>
+        <p>&copy;
+            <script>document.write(new Date().getFullYear());</script> All Rights Reserved. Designed with ❤️ by GDA.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
