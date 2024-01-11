@@ -76,7 +76,8 @@
                     </select>
                 </label>
                 <fieldset>
-                    <legend>What are your primary fitness goals? (Select all that apply)</legend>
+                    <legend class="embedded-legend">What are your primary fitness goals? (Select all that apply)
+                    </legend>
                     <label for="goal-weight-loss">
                         <input class="inline" type="checkbox" id="goal-weight-loss" name="exercise-goals"
                             value="weight-loss"> Weight
@@ -122,7 +123,8 @@
                     Please specify your diet type:
                     <input type="text" id="other-diet-type" name="other-diet-type" required>
                 </label>
-                <label for="food-allergies">Do you have any food allergies or intolerances?
+                <fieldset>
+                    <legend class="embedded-legend">Do you have any food allergies or intolerances?</legend>
                     <label for="food-allergies-yes">
                         <input class="inline" type="radio" id="food-allergies-yes" name="food-allergies-option"
                             value="yes"> Yes
@@ -131,7 +133,7 @@
                         <input class="inline" type="radio" id="food-allergies-no" name="food-allergies-option"
                             value="no" checked> No
                     </label>
-                </label>
+                </fieldset>
                 <!-- Additional textarea for specifying food allergies (hidden by default) -->
                 <label id="food-allergies-details-label" for="food-allergies-details">
                     Please specify your food allergies or intolerances:
@@ -144,7 +146,8 @@
                     <textarea id="meal-pattern" name="meal-pattern" placeholder="e.g., number of meals, snacks, etc."
                         required></textarea>
                 </label>
-                <label for="nutritional-supplements">Do you take any nutritional supplements regularly?
+                <fieldset>
+                    <legend class="embedded-legend">Do you take any nutritional supplements regularly?</legend>
                     <label for="nutritional-supplements-yes">
                         <input class="inline" type="radio" id="nutritional-supplements-yes"
                             name="nutritional-supplements-option" value="yes"> Yes
@@ -153,7 +156,7 @@
                         <input class="inline" type="radio" id="nutritional-supplements-no"
                             name="nutritional-supplements-option" value="no" checked> No
                     </label>
-                </label>
+                </fieldset>
                 <!-- Additional textarea for specifying nutritional supplements (hidden by default) -->
                 <label id="nutritional-supplements-details-label" for="nutritional-supplements-details">Please specify
                     the nutritional supplements you take:

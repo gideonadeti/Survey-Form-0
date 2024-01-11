@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, ol, li, form, fieldset {
+body, h1, p, form, fieldset {
     margin: 0;
     padding: 0;
 }
@@ -19,8 +19,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    /* Place the pseudo-element behind the content */
+    z-index: -1; /* Place the pseudo-element behind the content */
     background-image: url('images/background-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,8 +29,7 @@ body::before {
 
 header, main, footer {
     position: relative;
-    z-index: 1;
-    /* Ensures the content appears above the pseudo-element */
+    z-index: 1; /* Ensures the content appears above the pseudo-element */
 }
 
 header {
@@ -80,6 +78,7 @@ legend {
 
 .embedded-legend {
     font-size: unset;
+    font-weight: normal;
 }
 
 
@@ -92,9 +91,7 @@ label {
     width: unset;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
